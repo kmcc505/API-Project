@@ -38,7 +38,18 @@
 
   <body id="page-top">
 
-    Navigation
+    <!--FB JavaScript SDK for sharing button-->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.12';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+    <!--Navigation-->
     <nav class="navbar navbar-expand-lg bg-secondary fixed-top text-uppercase" id="mainNav">
       <div class="container">
         <a class="navbar-brand js-scroll-trigger" href="#page-top">Yum-Yums</a>
@@ -49,13 +60,13 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item mx-0 mx-lg-1">
-              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#portfolio">Find</a>
+              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#find">Find</a>
             </li>
             <li class="nav-item mx-0 mx-lg-1">
-              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#map">Eat</a>
+              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#eat">Eat</a>
             </li>
             <li class="nav-item mx-0 mx-lg-1">
-              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">Share</a>
+              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#share">Share</a>
             </li>
           </ul>
         </div>
@@ -65,17 +76,24 @@
     <!-- Header -->
     <header class="masthead bg-primary text-white text-center">
       <div class="container">
-        <img class="img-fluid mb-5 d-block mx-auto" id="rounded" src="img/profile.jpg" width= "300" alt="">
         <h1 class="text-uppercase mb-0">Yum-Yums!</h1>
         <hr class="star-light">
         <h2 class="font-weight-light mb-0">Find. Eat. Share.</h2>
       </div>
+      <br>
+      <div>
+      <i id="icon" class="fa fa-hand-peace-o" style="text-shadow: none; font-size: 200px; color: rgb(255, 255, 255); height: 300px; width: 300px; line-height: 300px; border-radius: 20%; text-align: center; background-color: rgb(44, 62, 80);"></i> 
+    </div>
+
     </header>
+  <div id="find">
+    <br>
+  </div>
 
     <!-- Portfolio Grid Section with food tiles to click-->
     <section id="portfolio">
       <div class="container">
-        <h2 class="text-center text-uppercase text-secondary mb-0">Find Food</h2>
+        <h2 class="text-center text-uppercase text-secondary mb-0">Find</h2>
         <hr class="star-dark mb-5">
         <div class="row">
           <div class="col-sm-4">
@@ -97,20 +115,36 @@
           </div>      
     </section>
 
+    <div id="eat">
+      </div>
+      <div class="container">
+          <h2 class="text-center text-uppercase text-secondary mb-0">Eat</h2>
+          <hr class="star-dark mb-5">
     <section>
         <div id="map"></div>
     </section>
 
+    <div id="share">
+        <br>
+      </div>
+      
     <!-- This id "about" will have the sharing feature.  -->
     <section class="bg-primary text-white mb-0" id="about">
       <div class="container">
         <h2 class="text-center text-uppercase text-white">Share</h2>
         <hr class="star-light mb-5">
         <div class="row">
-          <div class="col-lg-4 ml-auto">
-              <a href="https://www.facebook.com/sharer/sharer.php?s=100&p[url]=http://www.example.com&p[images][0]=&p[title]=Title%20Goes%20Here&p[summary]=Description%20goes%20here!" target="_blank" onclick="window.open(this.href,'targetWindow','toolbar=no,location=0,status=no,menubar=no,scrollbars=yes,resizable=yes,width=600,height=250'); return false"><button style="width:100%; margin-top:10px;" type="button" class="btn btn-facebook btn-lg"><i class="fa fa-facebook fa-2"></i> Share on Facebook</button></a>
+          <div class="col">
+              <div class="fb-share-button" data-href="https://example.com" data-layout="button" data-size="small" data-mobile-iframe="true"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fexample.com%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
           </div>
         </div>
+        <div class="row">
+          <div class="col">
+              <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a>
+          </div>
+        </div>
+        </div>
+          </div>
       </div>
     </section>
 
@@ -147,7 +181,10 @@
  <!--Custom cripts for this application-->
  <!--<script src="js/freelancer.js"></script>-->
 
- 
+ <!--Twitter Share button-->
+
+ <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
   
   </body>
 

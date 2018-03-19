@@ -388,16 +388,8 @@ a:focus, a:hover, a:active {
   border-radius: 25px;
   }
 
-.btn-facebook {
-  color: #fff;
-  background-color: #4C67A1;
-  }
+#about {
+  text-align: center;
+  line-height: 200%;
+}
 
-.btn-facebook:hover {
-  color: #fff;
-  background-color: #405D9B;
-  }
-
-.btn-facebook:focus {
-  color: #fff;
-  }
